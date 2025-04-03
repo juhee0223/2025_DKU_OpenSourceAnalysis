@@ -22,7 +22,9 @@ void Zipfian(const int write, const int read, SkipList<Key>& sl) {
     // Insert keys following Zipfian distribution
     auto w_start = Clock::now();
     for (int i = 1; i <= write; ++i) {
-        Key key = nextValue() % write+1;        
+        Key key = nextValue() % write+1;
+
+        //여기 앞뒤에 print추가
         sl.Insert(key);
     }
     auto w_end = Clock::now();
